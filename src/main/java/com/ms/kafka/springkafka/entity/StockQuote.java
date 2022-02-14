@@ -20,6 +20,7 @@ public class StockQuote {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="stock_id")
 	private Long id;
+	//System.out.println("Hello");
 	
 	@Column(name="stock_code")
 	private String code;
@@ -61,7 +62,10 @@ public class StockQuote {
 	public void setDateTime(Date dateTime) {
 		this.dateTime = dateTime;
 	}
-
+	public void print()
+	{
+		System.out.println("hello");
+	}
 	@Override
 	public String toString() {
 		return "StockQuote [id=" + id + ", code=" + code + ", unitPrice=" + unitPrice + ", dateTime=" + dateTime + "]";
